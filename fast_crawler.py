@@ -14,6 +14,7 @@ import os
 from spacy.lang.en.stop_words import STOP_WORDS
 import re
 
+urlinput = "https://vit.ac.in/"
 base = "https://vit.ac.in/"
 crawler_level = 2
 
@@ -186,7 +187,7 @@ def task(temp_urls, index):
 
 t = time.time()
 
-level_crawler(base, index)
+level_crawler(urlinput, index)
 
 print("\nURLs parsed : ", len(set(urls_parsed)))
 print("Total valid links found : ", len(set(urls_crawled)))
